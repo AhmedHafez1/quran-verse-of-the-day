@@ -2,7 +2,11 @@
   class="container"
   [ngStyle]="{ 'background-image': 'url(../../assets/images/' + img + '.jpg)' }"
 >
+  <header></header>
   <main *ngIf="ayah$ | async as ayah">
-    <h1>{{ ayah.text }}</h1>
+    <div class="ayah">
+      <h1 class="text">{{ ayah.text }}</h1>
+    </div>
   </main>
+  <footer></footer>
 </div>
