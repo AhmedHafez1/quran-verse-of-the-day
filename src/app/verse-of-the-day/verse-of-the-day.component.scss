@@ -2,30 +2,36 @@
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  display: grid;
-  align-content: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  padding: 4rem;
+  flex: 1;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 4rem 8rem;
   line-height: 1.5;
+  backdrop-filter: blur(3px);
   .ayah {
-    padding: 1.5rem 2.8rem;
-    background-color: white;
-    opacity: 0.4;
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.5);
     direction: rtl;
     border-radius: 3px;
     .text {
       text-align: center;
+      font-size: 2.5rem;
     }
   }
 }
 
 header {
-  height: 10rem;
+  flex: 0 9rem;
+  backdrop-filter: blur(3px);
 }
 
 footer {
-  height: 10rem;
+  flex: 0 9rem;
+  backdrop-filter: blur(3px);
 }

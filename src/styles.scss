@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:ital,wght@0,400;1,500;1,600&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 10px; // 1rem = 10px
+}
+
+body {
+  font-family: "Noto Naskh Arabic", serif;
 }
