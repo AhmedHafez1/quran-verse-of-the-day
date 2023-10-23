@@ -6,10 +6,13 @@ import { Ayah, AyahResponse } from '../models/ayah.model';
   providedIn: 'root',
 })
 export class QuranApiIntegrationService {
-  apiUrl = 'http://api.alquran.cloud/v1/ayah/';
+  ayahUrl = 'https://api.alquran.cloud/v1/ayah/';
+  editions = '/editions/quran-uthmani,en.asad,en.pickthall';
   constructor(private http: HttpClient) {}
 
   getAyah(ayahNumber: number): Observable<AyahResponse> {
-    return this.http.get<AyahResponse>(`${this.apiUrl}${ayahNumber}`);
+    return this.http.get<AyahResponse>(
+      `${this.ayahUrl}${ayahNumber}${this.editions}`
+    );
   }
 }

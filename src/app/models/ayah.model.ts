@@ -30,5 +30,5 @@ export interface Ayah {
 export interface AyahResponse {
   code: number;
   status: string;
-  data: Ayah;
+  data: Ayah[];
 }
