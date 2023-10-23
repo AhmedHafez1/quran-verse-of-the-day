@@ -14,14 +14,17 @@ main {
   padding: 4rem 8rem;
   line-height: 1.5;
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   .ayah {
-    padding: 2rem 4rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem 6rem;
+    background-color: rgba(0, 0, 0, 0.6);
     direction: rtl;
     border-radius: 3px;
     .text {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 3.7rem;
+      font-weight: 500;
+      color: white;
     }
   }
 }
