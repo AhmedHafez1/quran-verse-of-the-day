@@ -10,12 +10,8 @@ const NUMBER_OF_IMAGES = 5;
   styleUrls: ['./verse-of-the-day.component.scss'],
 })
 export class VerseOfTheDayComponent {
-  ayah$: Observable<Ayah> = this.verseOfTheDayService
-    .getAyahOfTheDay()
-    .pipe(map((ayahEditions) => ayahEditions[0]));
-  ayahTranslation$: Observable<Ayah[]> = this.verseOfTheDayService
-    .getAyahOfTheDay()
-    .pipe(map((ayahEditions) => ayahEditions.splice(0, 1)));
+  ayahEditions$: Observable<Ayah[]> =
+    this.verseOfTheDayService.getAyahOfTheDay();
 
   img = Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1;
 

@@ -3,9 +3,10 @@
   [ngStyle]="{ 'background-image': 'url(../../assets/images/' + img + '.jpg)' }"
 >
   <header></header>
-  <main>
-    <div class="ayah" *ngIf="ayah$ | async as ayah">
-      <h3 class="text">{{ ayah.text }}</h3>
+  <main *ngIf="ayahEditions$ | async as ayahEditions">
+    <div class="ayah">
+      <h3 class="ayah__text">{{ ayahEditions[0].text }}</h3>
+      <h5 class="ayah__translate">{{ ayahEditions[1].text }}</h5>
     </div>
   </main>
   <footer></footer>
